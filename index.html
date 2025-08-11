@@ -7,28 +7,239 @@
     <title>ThankYouFrames - Capture the Moment, Frame the Gratitude.</title>
     
     <!-- External CSS and Fonts -->
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background: #FFF8F0;
+            margin: 0;
+            color: #1C1C1C;
+            font-size: 1em; /* Reduced base font size */
+        }
+        .header-section {
+            background: #1C1C1C;
+            color: #1C1C1C; /* Change text color to black */
+            padding: 48px 0 32px 0;
+            text-align: center; /* Center all text in header section */
+        }
+        .header-section h1 {
+            color: #D4AF37;
+            font-size: 4em; /* Was 5em */
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+        .header-section h2 {
+            color: #1C1C1C; /* Change subheadline to black */
+            text-align: center;
+            font-size: 2em; /* Was 3em */
+            margin-bottom: 1.5em;
+        }
+        .hero-story {
+            background: #FFF8F0;
+            border-radius: 12px;
+            padding: 32px 24px;
+            margin-bottom: 2em;
+            box-shadow: 0 2px 12px rgba(28,28,28,0.04);
+            color: #1C1C1C; /* Ensure hero story text is black */
+            text-align: center; /* Center all text in hero story */
+        }
+        .hero-story h2 {
+            color: #D4AF37;
+            font-size: 3em !important; /* Was 4em */
+        }
+        .hero-story p,
+        .hero-story p[style] {
+            font-size: 1.4em !important; /* Was 2.4em */
+        }
+        .cta-button {
+            background: #C0392B;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            padding: 16px 32px;
+            font-size: 1.4em; /* Was 2.4em */
+            text-decoration: none;
+            display: inline-block;
+            margin: 24px auto 0 auto;
+            box-shadow: 0 2px 8px rgba(28,28,28,0.08);
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #A93226;
+        }
+        .offer-section {
+            background: #fff;
+            padding: 48px 0;
+        }
+        .offer-section h3 {
+            color: #1C1C1C;
+            text-align: center;
+            font-size: 3em; /* Was 4em */
+            margin-bottom: 2em;
+        }
+        .pricing-cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .price-card {
+            background: #fff;
+            border: 2px solid #D4AF37;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(28,28,28,0.06);
+            padding: 32px 24px;
+            width: 300px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .price-card h4 {
+            color: #D4AF37;
+            font-size: 1.6em; /* Was 2.6em */
+            margin-bottom: 0.5em;
+        }
+        .price-card .price {
+            color: #1C1C1C;
+            font-size: 3em; /* Was 4em */
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+        .price-card .tag {
+            background: #D4AF37;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 4px 12px;
+            margin-bottom: 1em;
+            display: inline-block;
+            font-size: 1em; /* Was 2em */
+        }
+        .price-card ul {
+            text-align: left;
+            margin: 1em 0 2em 0;
+            padding-left: 1em;
+            font-size: 1em; /* Was 2em */
+        }
+        .price-card ul li {
+            margin-bottom: 0.5em;
+        }
+        .trust-section {
+            background: #F7E1D7;
+            padding: 48px 0;
+        }
+        .trust-section h3 {
+            color: #1C1C1C;
+            text-align: center;
+            font-size: 3em; /* Was 4em */
+            margin-bottom: 2em;
+        }
+        .testimonials {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2em;
+        }
+        .testimonial-card {
+            background: #FFF8F0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(28,28,28,0.04);
+            padding: 24px;
+            width: 320px;
+            color: #1C1C1C;
+            font-size: 1em; /* Was 2em */
+        }
+        .testimonial-card .author {
+            color: #C0392B;
+            font-weight: 700;
+            margin-top: 1em;
+        }
+        .quality-badge {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .quality-badge img {
+            width: 80px;
+            margin-bottom: 1em;
+        }
+        .quality-badge p {
+            color: #1C1C1C;
+            font-size: 1.4em; /* Was 2.4em */
+            font-weight: 700;
+        }
+        .footer-section {
+            background: #1C1C1C;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+        }
+        .footer-section .cta-button {
+            background: #C0392B;
+            color: #fff;
+            margin-bottom: 1em;
+        }
+        .footer-section .disclaimer {
+            color: #fff;
+            font-size: 0.8em; /* Was 1.8em */
+            margin-top: 1em;
+        }
+        @media (max-width: 900px) {
+            .pricing-cards, .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+            .price-card, .testimonial-card {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER SECTION: Main headline, subheadline, VSL video, and primary CTA -->
     <header class="header-section">
         <div class="container">
-            <!-- Main emotional headline -->
-            <h1>Capture the Moment, Frame the Gratitude.</h1>
-            <!-- Value proposition subheadline -->
-            <h2>Custom Thank You Frames that make memories last forever.</h2>
-            
-            <!-- VSL (Video Sales Letter) Container -->
-            <div class="vsl-container">
-                <!-- Video placeholder - replace with actual VSL video -->
-                <!-- For YouTube/Vimeo: Replace this video tag with iframe embed -->
-                <video controls muted autoplay playsinline>
-                    <source src="video/placeholder_vsl.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+           
+            <!-- Replace video placeholder with provided text -->
+            <div class="hero-story">
+                <h2 style="font-size:2em; font-weight:bold; text-align:center; margin-bottom:1em;">
+                    The Most Meaningful Gift They’ll Ever Receive — And You’ll Ever Give
+                </h2>
+                <p style="text-align:center; font-size:1.2em; font-weight:bold;">
+                    It’s not flowers. It’s not chocolates.<br>
+                    It’s something they’ll keep forever… because it carries the one thing no other gift can: your gratitude.
+                </p>
+                <p>
+                    Have you ever given someone a gift…<br>
+                    …and seen their polite smile fade into a drawer the next week?
+                </p>
+                <p>
+                    Most gifts are forgotten.<br>
+                    They look nice.<br>
+                    They’re appreciated for a moment…<br>
+                    …but they don’t last.
+                </p>
+                <p>
+                    That’s why we created Thank You Frames —<br>
+                    a custom-framed piece designed not just to look beautiful,<br>
+                    but to capture the exact words and memories you want them to remember forever.
+                </p>
+                <p>
+                    When they see it, they won’t just see your gift.<br>
+                    They’ll feel the moment you gave it.<br>
+                    They’ll remember the story.<br>
+                    They’ll remember you.
+                </p>
+                <p>
+                    This isn’t about giving “something.”<br>
+                    It’s about giving the moment they’ll talk about for the rest of their lives.
+                </p>
+                <p>
+                    That’s the Thank You Frame Experience —<br>
+                    and it’s now easier than ever to create in just a few clicks.
+                </p>
             </div>
-            
             <!-- Primary CTA button - drives to Etsy store -->
             <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Now on Etsy</a>
         </div>
@@ -55,9 +266,9 @@
                 
                 <!-- Standard Frame - $40 tier (Most Popular) -->
                 <div class="price-card most-popular">
+                    <p class="tag">Most Popular</p>
                     <h4>Standard Frame</h4>
                     <p class="price">$40</p>
-                    <p class="tag">Most Popular</p>
                     <ul>
                         <li>8x10 inch custom frame</li>
                         <li>Personalized thank you message</li>
@@ -112,7 +323,7 @@
                 <!-- Handmade quality badge icon -->
                 <img src="images/handmade_badge.png" alt="Handmade Quality Badge">
                 <!-- Dynamic customer count (animated via JavaScript) -->
-                <p>Over <span id="customer-count">2,500</span> happy customers!</p>
+                <p>Over <span id="customer-count">10</span> happy customers!</p>
             </div>
         </div>
     </section>
