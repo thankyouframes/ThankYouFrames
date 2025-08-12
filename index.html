@@ -84,6 +84,7 @@
             gap: 32px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 2em;
         }
         .price-card {
             background: #fff;
@@ -124,15 +125,6 @@
         }
         .price-card ul li {
             margin-bottom: 0.5em;
-        }
-        .price-card .common-features {
-            margin: 1.5em 0 1em 0;
-            padding: 0;
-            list-style: none;
-            font-size: 0.95em;
-            color: #444;
-            border-top: 1px solid #eee;
-            padding-top: 1em;
         }
         .trust-section {
             background: #F7E1D7;
@@ -194,6 +186,45 @@
             font-size: 0.8em; /* Was 1.8em */
             margin-top: 1em;
         }
+        .section-title {
+            font-size: 2.2em;
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            font-size: 1.3em;
+            color: #1C1C1C;
+            text-align: center;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+        .gallery-img {
+            max-width: 340px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(28,28,28,0.10);
+            object-fit: cover;
+        }
+        .pricing-cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2em;
+        }
+        .quality-list {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0 0 0;
+            text-align: center;
+            color: #1C1C1C;
+            font-size: 1.1em;
+        }
+        .quality-list li {
+            margin-bottom: 0.5em;
+        }
         @media (max-width: 900px) {
             .pricing-cards, .testimonials {
                 flex-direction: column;
@@ -206,157 +237,171 @@
     </style>
 </head>
 <body>
-    <!-- HEADER SECTION: Main headline, subheadline, VSL video, and primary CTA -->
-    <header class="header-section">
-        <div class="container">
-           
-            <!-- Replace video placeholder with provided text -->
-            <div class="hero-story">
-                <h2 style="font-size:2em; font-weight:bold; text-align:center; margin-bottom:1em;">
-                    The Most Meaningful Gift They’ll Ever Receive — And You’ll Ever Give
-                </h2>
-                <p style="text-align:center; font-size:1.2em; font-weight:bold;">
-                    It’s not flowers. It’s not chocolates.<br>
-                    It’s something they’ll keep forever… because it carries the one thing no other gift can: your gratitude.
-                </p>
-                <p>
-                    Have you ever given someone a gift…<br>
-                    …and seen their polite smile fade into a drawer the next week?
-                </p>
-                <p>
-                    Most gifts are forgotten.<br>
-                    They look nice.<br>
-                    They’re appreciated for a moment…<br>
-                    …but they don’t last.
-                </p>
-                <p>
-                    That’s why we created Thank You Frames —<br>
-                    a custom-framed piece designed not just to look beautiful,<br>
-                    but to capture the exact words and memories you want them to remember forever.
-                </p>
-                <p>
-                    When they see it, they won’t just see your gift.<br>
-                    They’ll feel the moment you gave it.<br>
-                    They’ll remember the story.<br>
-                    They’ll remember you.
-                </p>
-                <p>
-                    This isn’t about giving “something.”<br>
-                    It’s about giving the moment they’ll talk about for the rest of their lives.
-                </p>
-                <p>
-                    That’s the Thank You Frame Experience —<br>
-                    and it’s now easier than ever to create in just a few clicks.
-                </p>
+    <!-- HERO SECTION -->
+    <section class="header-section" style="background:#FFF8F0;color:#1C1C1C;padding:56px 0 32px 0;">
+        <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:48px;">
+            <div style="flex:1 1 340px;min-width:300px;">
+                <h1 class="section-title" style="color:#D4AF37;">The Gift That Speaks from the Heart — Forever.</h1>
+                <div class="section-subtitle">Personalized Thank You Frames that capture gratitude, preserve memories, and leave a lasting impression.</div>
+                <a href="https://etsy.com/shop/thankyouframes" class="cta-button" style="margin-top:24px;" target="_blank">Order Yours on Etsy →</a>
             </div>
-            <!-- Primary CTA button - drives to Etsy store -->
-            <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Now on Etsy</a>
+            <div style="flex:1 1 340px;min-width:300px;display:flex;justify-content:center;">
+                <img src="images/nick.jpeg" alt="Thank You Frame in Home Setting" class="gallery-img">
+            </div>
         </div>
-    </header>
+    </section>
 
+    <!-- EMOTIONAL HOOK / STORY SECTION -->
+    <section style="background:#fff;padding:48px 0;">
+        <div class="container" style="max-width:800px;margin:0 auto;text-align:center;">
+            <h2 class="section-title" style="color:#C0392B;">Every “thank you” tells a story.</h2>
+            <div class="section-subtitle" style="color:#444;">
+                From CEOs moved to tears, to lifelong friends cherishing their bond — Thank You Frames are more than gifts. They’re tangible reminders of moments that matter. Each one is handcrafted with precision, personal detail, and genuine care.
+            </div>
+            <img src="images/nick.jpeg" alt="Nick Frame Lifestyle" class="gallery-img" style="margin:2em auto;">
+        </div>
+    </section>
+
+    <!-- LIMITED AVAILABILITY BANNER -->
+    <section style="background:#D4AF37;color:#fff;text-align:center;padding:18px 0;font-size:1.2em;font-weight:600;">
+        Only <span style="font-weight:bold;">14 frames</span> are made each week to ensure every piece receives the time, focus, and craftsmanship it deserves. Once the week’s spots are gone, new orders must wait for the next batch.
+    </section>
+
+    <!-- PRICING & OPTIONS SECTION -->
     <!-- OFFER SECTION: Three pricing tiers with features and CTAs -->
     <section class="offer-section">
         <div class="container">
             <h3>Our Custom Thank You Frames</h3>
-            <!-- Common features across all offers -->
+            <p style="text-align:center;font-size:1.2em;color:#444;margin-bottom:1em;">
+                <strong>Frame Options:</strong> Black or white — sizes 8x10" or 11x14"
+            </p>
             <ul class="common-features" style="max-width:700px;margin:0 auto 2em auto;padding:0;list-style:disc inside;font-size:1.1em;color:#444;">
-                 <li><strong>Frame choices</strong> We have a black and white (8x10 inch) and (11x14 inch) frames </li>
-                <li><strong>Message Crafting Assistance:</strong> Personalized help to craft the perfect message.</li>
-                <li><strong>Gift Representation:</strong> Beautiful gift wrap presentation, ready to impress.</li>
-                <li><strong>Digital Preview:</strong> See and approve your frame design before production.</li>
-                <li><strong>Gift Bag:</strong> Delivered in a premium-quality gift bag for elegant gifting.</li>
+                <li>Message crafting help</li>
+                <li>Digital design preview for approval</li>
+                <li>Premium gift wrap & gift bag</li>
+                <li><strong>Pickup Only:</strong> All orders are for local pickup (no shipping available)</li>
             </ul>
             <div class="pricing-cards">
-                
                 <!-- Starter Size Frame - $35 offer -->
                 <div class="price-card">
-                    <h4>Starter Size Frame</h4>
-                    <p class="price">$35</p>
+                    <h4>Starter Size – $35</h4>
                     <ul>
-                        <li><strong>Frame Size:</strong> Standard frame size(8x10 inch)</li>
-                        <li><strong>Message Length:</strong> Up to 320 characters</li>
-                        <li><strong>Design Style:</strong> Black or white frame with classic black font text</li>
-                        <li><strong>Production Time:</strong> Standard production queue (normal turnaround)</li>
+                        <li><strong>Size:</strong> 8x10"</li>
+                        <li><strong>Message:</strong> Up to 320 characters</li>
+                        <li><strong>Production:</strong> Standard turnaround</li>
                     </ul>
                     <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Now on Etsy</a>
                 </div>
-                
-                <!-- Standard Size Frame - $40 offer (Most Popular) -->
+                <!-- Standard + Priority - $40 offer (Most Popular) -->
                 <div class="price-card most-popular">
                     <p class="tag">Most Popular</p>
-                    <h4>Standard Size Frame + Priority Production</h4>
-                    <p class="price">$40</p>
+                    <h4>Standard + Priority – $40</h4>
                     <ul>
-                        <li><strong>Frame Size:</strong> Standard frame size (8x10 inch) </li>
-                        <li><strong>Message Length:</strong> Up to 365 characters</li>
-                        <li><strong>Design Style:</strong> Black or white frame with classic black font text</li>
-                        <li><strong>Production Time:</strong> Priority production — your order moves ahead of all $35 orders</li>
-                        <li><strong>Bonus:</strong> Handwritten note with your own words, ready to gift</li>
+                        <li><strong>Size:</strong> 8x10"</li>
+                        <li><strong>Message:</strong> Up to 415 characters</li>
+                        <li><strong>Production:</strong> Priority (ahead of $35 orders)</li>
+                        <li><strong>Bonus:</strong> Handwritten note</li>
                     </ul>
                     <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Now on Etsy</a>
                 </div>
-                
-                <!-- Premium Frame - $45 offer -->
+                <!-- Premium + Top Priority - $45 offer -->
                 <div class="price-card">
-                    <h4>Larger Premium Size Frame + Top Priority</h4>
-                    <p class="price">$45</p>
+                    <h4>Premium + Top Priority – $45</h4>
                     <ul>
-                        <li><strong>Frame Size:</strong> Larger premium size (bold statement piece)</li>
-                        <li><strong>Message Length:</strong> Up to 415 characters</li>
-                        <li><strong>Design Style:</strong> Classic black & white frame with black font text</li>
-                        <li><strong>Production Time:</strong> Top priority — moved to the front of the production queue for fastest delivery</li>
-                        <li><strong>Bonus:</strong> Handwritten note with your own words, ready to gift</li>
+                        <li><strong>Size:</strong> 11x14"</li>
+                        <li><strong>Message:</strong> Up to 495 characters</li>
+                        <li><strong>Production:</strong> Top priority (fastest delivery)</li>
+                        <li><strong>Bonus:</strong> Handwritten note</li>
                     </ul>
                     <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Now on Etsy</a>
+                </div>
+            </div>
+            <p style="text-align:center;color:#C0392B;font-weight:700;font-size:1.1em;margin-top:2em;">
+                ⚠ Only 14 frames available each week — once they’re gone, they’re gone!
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="examples-section" style="background:#FFF8F0;padding:48px 0;">
+        <div class="container">
+            <h2 class="section-title">See Thank You Frames in Real Homes</h2>
+            <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(28,28,28,0.06);padding:16px;width:300px;text-align:center;">
+                    <img src="images/lauren.jpeg" alt="Lauren Frame Home" class="gallery-img">
+                    <p style="margin-top:1em;color:#444;">Classic Frame</p>
+                </div>
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(28,28,28,0.06);padding:16px;width:300px;text-align:center;">
+                    <img src="images/nick.jpeg" alt="Nick Frame Home" class="gallery-img">
+                    <p style="margin-top:1em;color:#444;">Prestige Frame</p>
+                </div>
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(28,28,28,0.06);padding:16px;width:300px;text-align:center;">
+                    <img src="images/kalid.png" alt="Kalid Frame Home" class="gallery-img">
+                    <p style="margin-top:1em;color:#444;">Legacy Frame</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST SECTION: Customer testimonials, quality badge, and social proof -->
+    <!-- TESTIMONIALS SECTION -->
     <section class="trust-section">
         <div class="container">
-            <h3>What Our Customers Say</h3>
-            
-            <!-- Customer testimonials for social proof -->
+            <h2 class="section-title" style="color:#C0392B;">What Our Customers Say</h2>
             <div class="testimonials">
                 <div class="testimonial-card">
                     <p>"Thank You Frames are this cute? I literally gasped when I saw these. It’s giving classy + sentimental + Pinterest board vibes all in one. 10/10 would make my friends cry happy tears again."</p>
                     <p class="author">- Jarin H., Edmonton</p>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Perfect gift for my wedding vendors! Each frame was beautifully crafted and the thank you messages were exactly what I wanted. Fast shipping and excellent customer service."</p>
-                    <p class="author">- Jennifer L., Texas</p>
+                    <p>"I feel this is a physical way for one to express their gratitude towards a person, and it makes me feel like someone notices and cares enough to write this out and have it framed, I would have this displayed in a place I can always see so that I can be reminded of the impact my efforts and kindness can have."</p>
+                    <p class="author">- Nasra A., Edmonton</p>
                 </div>
                 <div class="testimonial-card">
-                    <p>"These frames are gorgeous! I bought several for my bridesmaids and they were all thrilled. The wood quality is amazing and the gold accents are so elegant."</p>
-                    <p class="author">- Amanda K., New York</p>
+                    <p>"When I saw my ThankYouFrame, I had to read it twice because it hit me so deeply. It carried so much more than just words, it carried every late session, every risk, and every moment we shared, and it reflected it all back to me. It made me realize that my leadership really mattered, and that's a feeling that will stay with me for a long time."</p>
+                    <p class="author">- Kalid U., Edmonton</p>
                 </div>
-            </div>
-            
-            <!-- Quality badge and customer count for credibility -->
-            <div class="quality-badge">
-                <!-- Handmade quality badge icon -->
-                <img src="images/handmade_badge.png" alt="Handmade Quality Badge">
-                <!-- Dynamic customer count (animated via JavaScript) -->
-                <p>Over <span id="customer-count">10</span> happy customers!</p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER SECTION: Final CTA and disclaimer -->
+    <!-- HANDCRAFTED QUALITY SECTION -->
+    <section style="background:#FFF8F0;padding:48px 0;">
+        <div class="container" style="max-width:700px;margin:0 auto;text-align:center;">
+            <h2 class="section-title">Handcrafted Quality</h2>
+            <ul class="quality-list" style="margin-bottom:2em;">
+                <li>Made with premium glass & precision-cut vinyl.</li>
+                <li>Personalized to your message.</li>
+                <li>Designed to last a lifetime.</li>
+            </ul>
+            <img src="images/handmade_badge.png" alt="Handmade Quality Badge" style="width:80px;margin-bottom:1em;">
+            <p style="color:#1C1C1C;font-weight:700;">Over <span id="customer-count">10</span> happy customers!</p>
+        </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section style="background:#fff;padding:48px 0;">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title" style="color:#D4AF37;">Order today and secure one of this week’s 14 handcrafted frames. Once they’re gone, they’re gone.</h2>
+            <a href="https://etsy.com/shop/thankyouframes" class="cta-button" style="margin-top:24px;" target="_blank">Order on Etsy Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
     <footer class="footer-section">
         <div class="container">
-            <!-- Final call-to-action button -->
-            <a href="https://etsy.com/shop/thankyouframes" class="cta-button" target="_blank">Order Your Custom Frame Today!</a>
-            <!-- Legal disclaimer about Etsy fulfillment -->
-            <p class="disclaimer">Orders are fulfilled via Etsy. Prices and shipping may vary.</p>
+            <p class="disclaimer">
+                Orders are for local pickup only. Prices may vary. No shipping available.
+            </p>
         </div>
     </footer>
-
-    <!-- JavaScript for interactivity and animations -->
     <script src="js/script.js"></script>
 </body>
 </html>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
 
 
