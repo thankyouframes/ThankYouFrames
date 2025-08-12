@@ -58,13 +58,16 @@
             font-weight: 700;
             border: none;
             border-radius: 6px;
-            padding: 16px 32px;
-            font-size: 1.4em; /* Was 2.4em */
+            padding: 14px 32px; /* Slightly bigger */
+            font-size: 1.15em;  /* Slightly bigger font */
             text-decoration: none;
             display: inline-block;
             margin: 24px auto 0 auto;
             box-shadow: 0 2px 8px rgba(28,28,28,0.08);
             transition: background 0.2s;
+            min-width: 160px;   /* Slightly wider min width */
+            max-width: 260px;   /* Slightly wider max width */
+            width: auto;
         }
         .cta-button:hover {
             background: #A93226;
@@ -268,26 +271,25 @@
     </section>
 
     <!-- PRICING & OPTIONS SECTION -->
-    <!-- OFFER SECTION: Three pricing tiers with features and CTAs -->
-    <section class="offer-section">
-        <div class="container">
-            <h3>Our Custom Thank You Frames</h3>
-            <div style="max-width:700px;margin:0 auto 1em auto;padding:0;text-align:center;">
-                <p style="font-size:1.2em;color:#444;margin-bottom:0.5em;">
+    <section class="offer-section" style="padding:36px 0;">
+        <div class="container" style="max-width:500px;margin:0 auto;">
+            <h3 style="font-size:2em;">Our Custom Thank You Frames</h3>
+            <div style="margin-bottom:1em;text-align:center;">
+                <p style="font-size:1em;color:#444;margin-bottom:0.5em;">
                     <strong>Frame Options:</strong> Black or white — sizes 8x10" or 11x14"
                 </p>
-                <ul class="common-features" style="margin:0 auto;padding:0;list-style:disc inside;font-size:1.1em;color:#444;display:inline-block;text-align:left;">
+                <ul class="common-features" style="margin:0 auto;padding:0;list-style:disc inside;font-size:1em;color:#444;display:inline-block;text-align:left;">
                     <li>Message crafting help</li>
                     <li>Digital design preview for approval</li>
                     <li>Premium gift wrap & gift bag</li>
-                    <li><strong>Pickup Only:</strong> All orders are for local pickup (no shipping available)</li>
+                    <li><strong>Pickup Only:</strong> Local pickup (no shipping)</li>
                 </ul>
             </div>
-            <div class="pricing-cards">
+            <div class="pricing-cards" style="flex-direction:column;align-items:center;gap:20px;">
                 <!-- Starter Size Frame - $35 offer -->
-                <div class="price-card">
-                    <h4>Starter Size – $35</h4>
-                    <ul>
+                <div class="price-card" style="width:100%;max-width:340px;margin-bottom:0;">
+                    <h4 style="font-size:1.2em;">Starter Size – $35</h4>
+                    <ul style="font-size:0.95em;">
                         <li><strong>Size:</strong> 8x10"</li>
                         <li><strong>Message:</strong> Up to 320 characters</li>
                         <li><strong>Production:</strong> Standard turnaround</li>
@@ -295,10 +297,10 @@
                     <a href="https://www.etsy.com/ca/listing/4349929267/custom-thank-you-frame-gift-personalized?ref=shop_home_feat_1&frs=1&logging_key=aa6d995a0953b0d2a247c4d202f11628fc2e607c%3A4349929267" class="cta-button" target="_blank">Order Now on Etsy</a>
                 </div>
                 <!-- Standard + Priority - $40 offer (Most Popular) -->
-                <div class="price-card most-popular">
-                    <p class="tag">Most Popular</p>
-                    <h4>Standard + Priority – $40</h4>
-                    <ul>
+                <div class="price-card most-popular" style="width:100%;max-width:340px;margin-bottom:0;">
+                    <p class="tag" style="font-size:0.95em;">Most Popular</p>
+                    <h4 style="font-size:1.2em;">Standard + Priority – $40</h4>
+                    <ul style="font-size:0.95em;">
                         <li><strong>Size:</strong> 8x10"</li>
                         <li><strong>Message:</strong> Up to 415 characters</li>
                         <li><strong>Production:</strong> Priority (ahead of $35 orders)</li>
@@ -307,9 +309,9 @@
                     <a href="https://www.etsy.com/ca/listing/4349929121/custom-thank-you-frame-gift-personalized?ref=shop_home_feat_2&frs=1&logging_key=028f2f6a22a2bc8778739573a59a35d415c0d9c3%3A4349929121" class="cta-button" target="_blank">Order Now on Etsy</a>
                 </div>
                 <!-- Premium + Top Priority - $45 offer -->
-                <div class="price-card">
-                    <h4>Premium + Top Priority – $45</h4>
-                    <ul>
+                <div class="price-card" style="width:100%;max-width:340px;margin-bottom:0;">
+                    <h4 style="font-size:1.2em;">Premium + Top Priority – $45</h4>
+                    <ul style="font-size:0.95em;">
                         <li><strong>Size:</strong> 11x14"</li>
                         <li><strong>Message:</strong> Up to 495 characters</li>
                         <li><strong>Production:</strong> Top priority (fastest delivery)</li>
@@ -318,7 +320,7 @@
                     <a href="https://www.etsy.com/ca/listing/4341424028/custom-thank-you-frame-gift-personalized?ref=shop_home_feat_3&frs=1&logging_key=f7dc2170c2a99cddce038765cf65d06321c75743%3A4341424028" class="cta-button" target="_blank">Order Now on Etsy</a>
                 </div>
             </div>
-            <p style="text-align:center;color:#C0392B;font-weight:700;font-size:1.1em;margin-top:2em;">
+            <p style="text-align:center;color:#C0392B;font-weight:700;font-size:1em;margin-top:2em;">
                 ⚠ Only 14 frames available each week — once they’re gone, they’re gone!
             </p>
         </div>
@@ -388,6 +390,21 @@
         </div>
     </section>
 
+    <!-- CONTACT FORM SECTION -->
+    <section style="background:#FFF8F0;padding:48px 0;">
+        <div class="container" style="max-width:500px;margin:0 auto;text-align:center;">
+            <h2 class="section-title">Contact</h2>
+            <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding:12px;font-size:1em;border-radius:6px;border:1px solid #ccc;">
+                <input type="email" name="email" placeholder="Your Email" required style="padding:12px;font-size:1em;border-radius:6px;border:1px solid #ccc;">
+                <textarea name="message" placeholder="Your Message or Reservation Request" required style="padding:12px;font-size:1em;border-radius:6px;border:1px solid #ccc;min-height:100px;"></textarea>
+                <button type="submit" class="cta-button" style="width:100%;">Send Message</button>
+                <div id="form-status" style="margin-top:1em;color:#C0392B;font-weight:600;"></div>
+            </form>
+            <p style="margin-top:1em;font-size:0.95em;color:#444;">We'll reply to your email as soon as possible.</p>
+        </div>
+    </section>
+
     <!-- FOOTER SECTION -->
     <footer class="footer-section">
         <div class="container">
@@ -397,5 +414,28 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+    // Simple email sending via Formspree (free service)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var status = document.getElementById('form-status');
+        var data = new FormData(form);
+        fetch('https://formspree.io/f/mgvzdaen', { // Updated with your Formspree form ID
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+            if (response.ok) {
+                status.textContent = "Thank you! Your message has been sent.";
+                form.reset();
+            } else {
+                status.textContent = "Sorry, there was a problem. Please try again.";
+            }
+        }).catch(function() {
+            status.textContent = "Sorry, there was a problem. Please try again.";
+        });
+    });
+    </script>
 </body>
 </html>
