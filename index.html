@@ -261,29 +261,48 @@
         }
         .testimonial-card {
             background: #1F2937;
-            padding: 32px;
+            padding: 0;
             border-radius: 12px;
-            border-left: 4px solid #D4AF37;
+            border: 2px solid #D4AF37;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
         .testimonial-card:hover,
         .testimonial-card:focus-within {
             transform: translateY(-4px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+        .testimonial-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .testimonial-content {
+            padding: 28px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .testimonial-text {
-            font-size: clamp(1rem, 2vw, 1.1rem);
+            font-size: clamp(0.95rem, 1.8vw, 1rem);
             font-style: italic;
             color: #D1D5DB;
             margin-bottom: 20px;
+            line-height: 1.6;
         }
         .testimonial-author {
             font-weight: 700;
             color: #D4AF37;
             font-size: clamp(1rem, 1.5vw, 1.1rem);
+            margin-bottom: 4px;
         }
         .testimonial-company {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #9CA3AF;
         }
 
@@ -665,32 +684,32 @@
                 <div class="carousel-track" id="carouselTrack">
                     <!-- Slide 1 -->
                     <div class="carousel-item">
-                        <img src="image/pomelli_image.png" alt="ThankYouFrames Gift" class="gallery-img">
+                        <img src="image/picthankyouframe/pomelli_image.png" alt="ThankYouFrames Gift" class="gallery-img">
                         <p class="carousel-caption">Premium Gift Design</p>
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img src="image/Honor_her_impact__version_6.png" alt="Honor Their Impact" class="gallery-img">
+                        <img src="image/picthankyouframe/Honor_her_impact__version_6.png" alt="Honor Their Impact" class="gallery-img">
                         <p class="carousel-caption">Honor Their Impact</p>
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="image/Lasting_Emotional_Proof_version_1.png" alt="Lasting Emotional Proof" class="gallery-img">
+                        <img src="image/picthankyouframe/Lasting_Emotional_Proof_version_1.png" alt="Lasting Emotional Proof" class="gallery-img">
                         <p class="carousel-caption">Lasting Emotional Proof</p>
                     </div>
                     <!-- Slide 4 -->
                     <div class="carousel-item">
-                        <img src="image/pomelli-image (9).png" alt="Executive Gift" class="gallery-img">
+                        <img src="image/picthankyouframe/pomelli-image (9).png" alt="Executive Gift" class="gallery-img">
                         <p class="carousel-caption">Executive Gift Design</p>
                     </div>
                     <!-- Slide 5 -->
                     <div class="carousel-item">
-                        <img src="image/pomelli-image (4).png" alt="Corporate Gift" class="gallery-img">
+                        <img src="image/picthankyouframe/pomelli-image (4).png" alt="Corporate Gift" class="gallery-img">
                         <p class="carousel-caption">Corporate Gift Design</p>
                     </div>
                     <!-- Slide 6 -->
                     <div class="carousel-item">
-                        <img src="image/Write_Your_Heart_on_Glass_version_1.png" alt="Write Your Heart on Glass" class="gallery-img">
+                        <img src="image/picthankyouframe/Write_Your_Heart_on_Glass_version_1.png" alt="Write Your Heart on Glass" class="gallery-img">
                         <p class="carousel-caption">Write Your Heart on Glass</p>
                     </div>
                 </div>
@@ -710,15 +729,22 @@
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-text">"ThankYouFrames completely changed our employee retention strategy. The 5-minute intake call saves me hours, and the final glass piece blew my top executive away."</div>
-                    <div class="testimonial-author">Sarah J.</div>
-                    <div class="testimonial-company">VP of Operations</div>
+                    <img src="image/picthankyouframe/kalid.png" alt="Kalid" class="testimonial-image">
+                    <div class="testimonial-content">
+                            <div class="testimonial-author">Kalid</div>
+                            <div class="testimonial-company">CEO of Eunoia a JA company</div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-text">"I handed one of these to a massive client after closing a deal. The quality of the dual-pane glass and the custom messaging locked in our relationship for the next decade."</div>
-                    <div class="testimonial-author">Michael T.</div>
-                    <div class="testimonial-company">Managing Partner</div>
+                    <img src="image/picthankyouframe/lauren.png" alt="Lauren" class="testimonial-image">
+                    <div class="testimonial-content">
+
+                            <div class="testimonial-author">Lauren</div>
+                            <div class="testimonial-company">Student Events & Volunteer Engagement Coordinator</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
